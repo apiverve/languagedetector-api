@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: Language Detector
-  description: Language Detector is a simple tool for detecting the language of a text. It returns the language code and the confidence level.
+  description: >-
+    Language Detector is a simple tool for detecting the language of a text. It
+    returns the language code and the confidence level.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/languagedetector:
     post:
       summary: Detect Language
-      description: Language Detector is a simple tool for detecting the language of a text. It returns the language code and the confidence level.
+      description: Detect the language of a body of text
       operationId: languagedetector
       parameters: []
       responses:
@@ -35,31 +37,27 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
-                  code:
-                    type: number
-                    description: code
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                - language: spanish
-                  confidence: 0.384717948717949
-                  code: es
-                - language: portuguese
-                  confidence: 0.294615384615385
-                  code: pt
-                - language: danish
-                  confidence: 0.246461538461538
-                  code: da
-                code: 200
+                  - language: spanish
+                    confidence: 0.38471794871794873
+                    code: es
+                  - language: portuguese
+                    confidence: 0.2946153846153846
+                    code: pt
+                  - language: danish
+                    confidence: 0.2464615384615384
+                    code: da
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -70,11 +68,8 @@ paths:
                 text:
                   type: string
                   description: The text to detect the language of
-                  example: esta es una frase en español. esta API puede detectar fácilmente el idioma
               required:
-              - text
-              example:
-                text: esta es una frase en español. esta API puede detectar fácilmente el idioma
+                - text
 components:
   securitySchemes:
     api_key:
@@ -82,4 +77,6 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  text: esta es una frase en español. esta API puede detectar fácilmente el idioma
