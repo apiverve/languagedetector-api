@@ -1,1 +1,3 @@
-from .apiClient import LanguagedetectorAPIClient
+from .apiClient import LanguagedetectorAPIClient, LanguagedetectorAPIClientError
+
+__all__ = ['LanguagedetectorAPIClient', 'LanguagedetectorAPIClientError']
