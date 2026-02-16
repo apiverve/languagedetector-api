@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:languagedetector-api:1.1.13'
+    implementation 'com.github.apiverve:languagedetector-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ LanguageDetectorAPIClient client = new LanguageDetectorAPIClient("YOUR_API_KEY")
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "");
+    parameters.put("text", "esta es una frase en español. esta API puede detectar fácilmente el idioma");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
