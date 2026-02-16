@@ -231,8 +231,9 @@ from apiverve_languagedetector.apiClient import LanguagedetectorAPIClient
 
 api = LanguagedetectorAPIClient("[YOUR_API_KEY]")
 
+query = { "text": "esta es una frase en español. esta API puede detectar fácilmente el idioma" }
+
 try:
-    query = { "text": "esta es una frase en español. esta API puede detectar fácilmente el idioma" }
     result = api.execute(query)
     print(result)
 finally:
