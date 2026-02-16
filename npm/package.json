@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/languagedetector",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Language Detector is a simple tool for detecting the language of a text. It returns the language code and the confidence level.",
   "main": "index.js",
   "types": "index.d.ts",
