@@ -121,24 +121,28 @@ async function makeRequest() {
 {
   "status": "ok",
   "error": null,
-  "data": [
-    {
-      "language": "spanish",
-      "confidence": 0.38471794871794873,
-      "code": "es"
-    },
-    {
-      "language": "portuguese",
-      "confidence": 0.2946153846153846,
-      "code": "pt"
-    },
-    {
-      "language": "danish",
-      "confidence": 0.2464615384615384,
-      "code": "da"
-    }
-  ],
-  "code": 200
+  "data": {
+    "primaryLanguage": "spanish",
+    "primaryCode": "es",
+    "confidenceLevel": "medium",
+    "detectedLanguages": [
+      {
+        "language": "spanish",
+        "confidence": 0.38471794871794873,
+        "code": "es"
+      },
+      {
+        "language": "portuguese",
+        "confidence": 0.2946153846153846,
+        "code": "pt"
+      },
+      {
+        "language": "danish",
+        "confidence": 0.2464615384615384,
+        "code": "da"
+      }
+    ]
+  }
 }
 ```
 
