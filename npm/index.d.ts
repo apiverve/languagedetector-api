@@ -4,18 +4,37 @@ declare module '@apiverve/languagedetector' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface languagedetectorResponse {
     status: string;
     error: string | null;
     data: LanguageDetectorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface LanguageDetectorData {
-      language:   string;
-      confidence: number;
-      code:       string;
+      primaryLanguage:   null | string;
+      primaryCode:       null | string;
+      confidenceLevel:   null | string;
+      detectedLanguages: DetectedLanguage[];
+  }
+  
+  interface DetectedLanguage {
+      language:   null | string;
+      confidence: number | null;
+      code:       null | string;
   }
 
   export default class languagedetectorWrapper {
