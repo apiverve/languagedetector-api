@@ -43,15 +43,19 @@ paths:
                 status: ok
                 error: null
                 data:
-                  - language: spanish
-                    confidence: 0.38471794871794873
-                    code: es
-                  - language: portuguese
-                    confidence: 0.2946153846153846
-                    code: pt
-                  - language: danish
-                    confidence: 0.2464615384615384
-                    code: da
+                  primaryLanguage: spanish
+                  primaryCode: es
+                  confidenceLevel: medium
+                  detectedLanguages:
+                    - language: spanish
+                      confidence: 0.38471794871794873
+                      code: es
+                    - language: portuguese
+                      confidence: 0.2946153846153846
+                      code: pt
+                    - language: danish
+                      confidence: 0.2464615384615384
+                      code: da
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
