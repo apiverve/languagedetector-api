@@ -51,7 +51,7 @@ Here's a simple example to get you started quickly:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.LanguageDetector;
 
 class Program
 {
@@ -60,7 +60,7 @@ class Program
         // Initialize the API client
         var apiClient = new LanguageDetectorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
+        var queryOptions = new LanguageDetectorQueryOptions {
     text = "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 
@@ -116,7 +116,7 @@ The modern async/await pattern provides the best performance and code readabilit
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.LanguageDetector;
 
 public class Example
 {
@@ -124,7 +124,7 @@ public class Example
     {
         var apiClient = new LanguageDetectorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
+        var queryOptions = new LanguageDetectorQueryOptions {
     text = "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 
@@ -148,7 +148,7 @@ If you need to use synchronous code, you can use the `Execute` method:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.LanguageDetector;
 
 public class Example
 {
@@ -156,7 +156,7 @@ public class Example
     {
         var apiClient = new LanguageDetectorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
+        var queryOptions = new LanguageDetectorQueryOptions {
     text = "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 
@@ -185,7 +185,7 @@ The API client provides comprehensive error handling. Here are some examples:
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.LanguageDetector;
 
 public class Example
 {
@@ -193,7 +193,7 @@ public class Example
     {
         var apiClient = new LanguageDetectorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
+        var queryOptions = new LanguageDetectorQueryOptions {
     text = "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 
@@ -237,7 +237,7 @@ public class Example
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.LanguageDetector;
 
 public class Example
 {
@@ -249,7 +249,7 @@ public class Example
         apiClient.SetMaxRetries(3);        // Retry up to 3 times (default: 0, max: 3)
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
-        var queryOptions = new QueryOptions {
+        var queryOptions = new LanguageDetectorQueryOptions {
     text = "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 
@@ -290,7 +290,7 @@ var apiClient = new LanguageDetectorAPIClient("[YOUR_API_KEY]");
 apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
-var queryOptions = new QueryOptions {
+var queryOptions = new LanguageDetectorQueryOptions {
     text = "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 
@@ -316,7 +316,7 @@ apiClient.SetLogger(message =>
     Console.WriteLine($"[LOG] {DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
 });
 
-var queryOptions = new QueryOptions {
+var queryOptions = new LanguageDetectorQueryOptions {
     text = "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 
@@ -334,7 +334,7 @@ var apiClient = new LanguageDetectorAPIClient("[YOUR_API_KEY]");
 apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3)
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
-var queryOptions = new QueryOptions {
+var queryOptions = new LanguageDetectorQueryOptions {
     text = "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 
@@ -346,7 +346,7 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
-var queryOptions = new QueryOptions {
+var queryOptions = new LanguageDetectorQueryOptions {
     text = "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 
@@ -366,24 +366,28 @@ using (var apiClient = new LanguageDetectorAPIClient("[YOUR_API_KEY]"))
 {
   "status": "ok",
   "error": null,
-  "data": [
-    {
-      "language": "spanish",
-      "confidence": 0.38471794871794873,
-      "code": "es"
-    },
-    {
-      "language": "portuguese",
-      "confidence": 0.2946153846153846,
-      "code": "pt"
-    },
-    {
-      "language": "danish",
-      "confidence": 0.2464615384615384,
-      "code": "da"
-    }
-  ],
-  "code": 200
+  "data": {
+    "primaryLanguage": "spanish",
+    "primaryCode": "es",
+    "confidenceLevel": "medium",
+    "detectedLanguages": [
+      {
+        "language": "spanish",
+        "confidence": 0.38471794871794873,
+        "code": "es"
+      },
+      {
+        "language": "portuguese",
+        "confidence": 0.2946153846153846,
+        "code": "pt"
+      },
+      {
+        "language": "danish",
+        "confidence": 0.2464615384615384,
+        "code": "da"
+      }
+    ]
+  }
 }
 ```
 
