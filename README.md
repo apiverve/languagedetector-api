@@ -197,11 +197,47 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Language Detector API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "primaryLanguage": "spanish",
+    "primaryCode": "es",
+    "confidenceLevel": "medium",
+    "detectedLanguages": [
+      {
+        "language": "spanish",
+        "confidence": 0.38471794871794873,
+        "code": "es"
+      },
+      {
+        "language": "portuguese",
+        "confidence": 0.2946153846153846,
+        "code": "pt"
+      },
+      {
+        "language": "danish",
+        "confidence": 0.2464615384615384,
+        "code": "da"
+      }
+    ]
+  }
 }
 ```
 
