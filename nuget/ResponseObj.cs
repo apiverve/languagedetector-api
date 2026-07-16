@@ -24,18 +24,48 @@ namespace APIVerve.API.LanguageDetector
         public object Error { get; set; }
 
         [JsonProperty("data")]
-        public Datum[] Data { get; set; }
+        public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
-    public partial class Datum
+    public partial class Data
+    {
+        [JsonProperty("primaryLanguage")]
+        public string PrimaryLanguage { get; set; }
+
+        [JsonProperty("primaryCode")]
+        public string PrimaryCode { get; set; }
+
+        [JsonProperty("confidenceLevel")]
+        public string ConfidenceLevel { get; set; }
+
+        [JsonProperty("detectedLanguages")]
+        public DetectedLanguage[] DetectedLanguages { get; set; }
+    }
+
+    public partial class DetectedLanguage
     {
         [JsonProperty("language")]
         public string Language { get; set; }
 
         [JsonProperty("confidence")]
-        public double Confidence { get; set; }
+        public double? Confidence { get; set; }
 
         [JsonProperty("code")]
         public string Code { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
