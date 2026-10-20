@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Language Detector
   description: >-
-    Language Detector is a simple tool for detecting the language of a text. It
-    returns the language code and the confidence level.
+    Language Detector is a language detection API that identifies the language
+    of any submitted text string. It returns the primary language, its ISO 639-1
+    code, and candidate matches ranked by confidence scores.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/languagedetector:
     post:
-      summary: Detect Language
+      summary: Language Detector
       description: Detect the language of a body of text
       operationId: languagedetector
       parameters: []
