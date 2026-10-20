@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/languagedetector",
-  "version": "1.2.0",
-  "description": "Language Detector is a simple tool for detecting the language of a text. It returns the language code and the confidence level.",
+  "version": "1.2.2",
+  "description": "Language Detector is a language detection API that identifies the language of any submitted text string. It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "language detector", "language detection", "language detector api", "language detection api", "language detector tool"
+    "language detector api", "language detection api", "detect language api", "language recognition api", "free language detection api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/languagedetector-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/languagedetector?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/languagedetector?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
