@@ -1,6 +1,6 @@
 # Language Detector API - PHP Package
 
-Language Detector is a simple tool for detecting the language of a text. It returns the language code and the confidence level.
+Language Detector is a language detection API that identifies the language of any submitted text string. It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores.
 
 ## Installation
 
@@ -100,11 +100,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/languagedetector?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/languagedetector?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/languagedetector?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/languagedetector?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/languagedetector?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/languagedetector?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
