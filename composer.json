@@ -1,7 +1,7 @@
 {
     "name": "apiverve/languagedetector",
-    "description": "Language Detector is a simple tool for detecting the language of a text. It returns the language code and the confidence level.",
-    "version": "1.2.0",
+    "description": "Language Detector is a language detection API that identifies the language of any submitted text string. It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "languagedetector",
-        "language detector",
-        "language detection",
         "language detector api",
         "language detection api",
-        "language detector tool"
+        "detect language api",
+        "language recognition api",
+        "free language detection api"
     ],
-    "homepage": "https://apiverve.com/marketplace/languagedetector?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/languagedetector?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/languagedetector",
