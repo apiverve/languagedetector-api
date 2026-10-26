@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/languagedetector",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Language Detector is a language detection API that identifies the language of any submitted text string. It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores.",
   "main": "index.js",
   "types": "index.d.ts",
