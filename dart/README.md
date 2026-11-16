@@ -1,6 +1,6 @@
 # Language Detector API - Dart/Flutter Client
 
-Language Detector is a language detection API that identifies the language of any submitted text string. It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores.
+Language Detector is a language detection API that identifies the language of text written in Latin, Cyrillic and other alphabetic scripts (Chinese, Japanese, Korean and Greek are not supported). It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_languagedetector.svg)](https://pub.dev/packages/apiverve_languagedetector)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_languagedetector: ^1.2.5
+  apiverve_languagedetector: ^1.2.6
 ```
 
 Then run:
