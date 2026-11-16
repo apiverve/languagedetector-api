@@ -10,11 +10,11 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_languagedetector',
-    version='1.2.5',
+    version='1.2.6',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
-    description='Language Detector is a language detection API that identifies the language of any submitted text string. It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores.',
+    description='Language Detector is a language detection API that identifies the language of text written in Latin, Cyrillic and other alphabetic scripts (Chinese, Japanese, Korean and Greek are not supported). It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores.',
     author='APIVerve',
     author_email='hello@apiverve.com',
     url='https://apiverve.com/marketplace/languagedetector?utm_source=pypi&utm_medium=referral&utm_content=homepage',

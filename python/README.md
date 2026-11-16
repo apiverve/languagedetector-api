@@ -1,7 +1,7 @@
 Language Detector API
 ============
 
-Language Detector is a language detection API that identifies the language of any submitted text string. It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores.
+Language Detector is a language detection API that identifies the language of text written in Latin, Cyrillic and other alphabetic scripts (Chinese, Japanese, Korean and Greek are not supported). It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores.
 
 
 [![PyPI version](https://img.shields.io/pypi/v/apiverve-languagedetector.svg)](https://pypi.org/project/apiverve-languagedetector/)
