@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "apiverve_languagedetector"
-  spec.version       = "1.2.5"
+  spec.version       = "1.2.6"
   spec.authors       = ["APIVerve"]
   spec.email         = ["hello@apiverve.com"]
 
   spec.summary       = "Language Detector API - Ruby Client"
-  spec.description   = "Language Detector is a language detection API that identifies the language of any submitted text string. It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores."
+  spec.description   = "Language Detector is a language detection API that identifies the language of text written in Latin, Cyrillic and other alphabetic scripts (Chinese, Japanese, Korean and Greek are not supported). It returns the primary language, its ISO 639-1 code, and candidate matches ranked by confidence scores."
   spec.homepage      = "https://apiverve.com/marketplace/languagedetector?utm_source=ruby&utm_medium=referral&utm_content=homepage"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
